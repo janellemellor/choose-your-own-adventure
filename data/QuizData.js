@@ -1,9 +1,3 @@
-//Instructions: Design Game or Quiz
-// Create metadata that describes the adventures or questions that will be presented to the user. This data needs to be consistent, meaning each item needs to have the same information. Think about:
-
-// Common descriptors like title, description, and image, audio, and/or video.
-// What are the choices to be presented to the user, and what are the "consequences", or adjustments that are to be made to the user object
-
 //Create three (more if time) quiz options for the user to choose from. 
 //For each quest, use a new variable name and use an object rather than an array to store the information. 
 //make sure to include the choices as an array within the object.
@@ -87,4 +81,6 @@ const reuse = {
     }],
 };
 
-export { diet, transportation, reuse };
+const quizzes = { diet, transportation, reuse };
+
+export default quizzes;
