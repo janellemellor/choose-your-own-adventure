@@ -39,10 +39,21 @@ userFormData.addEventListener('submit', (event) => {
     //use to prevent the page from auto-refreshing
     event.preventDefault();
 
-    
+    //create a new user based on the data they input from the form
+    const newUser = createUserObject(userFormData);
+
+    //save the user object to local storage
+    function saveUserObject(someUserObject) {
+        const json = JSON.stringify(someUserObject); 
+        localStorage.setItem(someUserObject, json);
+    }
+
+    //come back to this function above, not sure about the .setItem....
+   
+
+//redirect to the next quiz question  (window something something)
 
 )}
 
 
-//save the user object to local storage
-//redirect to the next quiz question    
+   
