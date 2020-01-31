@@ -8,7 +8,7 @@
 const diet = {
     id: 'diet',
     title: 'What`s the beef?',
-    description: 'Some description asking a question about how much meat you eat',
+    question: 'Some description asking a question about how much meat you eat',
     // image: '',    come back and add image here
     choices: [{
         id: 'carnivore',
@@ -32,7 +32,7 @@ const diet = {
 const transportation = {
     id: 'transportation',
     title: 'pedal power',
-    description: 'Some description asking a question about your primary mode of transportation',
+    question: 'Some description asking a question about your primary mode of transportation',
     // image: '',    come back and add image here
     choices: [{
         id: 'humanPowered',
@@ -58,7 +58,7 @@ const transportation = {
 const reuse = {
     id: 'reuse',
     title: 'would you like a straw?',
-    description: 'Some description asking a question about re-using, not wasting.',
+    question: 'Some description asking a question about re-using, not wasting.',
     // image: '',    come back and add image here
     choices: [{
         id: 'mostlyDisposables',
@@ -81,6 +81,6 @@ const reuse = {
     }],
 };
 
-const quizzes = { diet, transportation, reuse };
+const quizzes = [diet, transportation, reuse];
 
 export default quizzes;
