@@ -8,29 +8,36 @@ import { createUserObject, saveUserObject, getUserStatus } from '../common/utils
 getUserStatus();
 
 
-//if there are no questions left to answer...
-    //loop through quizzes array and check if completed)
-
+//make a function! 
 //iterate through quizzes array to see if the user has answered all the questions
-quizDataArray.forEach(quiz => {
-    //if the quizzes are all completed
-    if (user.completedQuizzes[quiz.id]) {
-        return true;   
-    } else {
-        return false;
-    }
-});
+function checkIfUserCompletedAllQuizzes() {
+    quizDataArray.forEach(quiz, user => {
+        //if the quizzes are all completed return true (*check this syntax)
+        if (user.completedQuizzes[quiz.id]) {
+            return true;   
+            //otherwise, return false
+        } else {
+            return false;
+        }
+    });
+//consider moving this function to another file...
 
 
 
-    //redirect to the results page
-
-
-
-
-
+//if there are no questions left to answer...
+if(checkIfUserCompletedAllQuizzes(quiz,user) === true) {
+     //redirect to the results page
+    return window.location = './results/index.html';
 //if there are any questions left to answer...
+} else {
 //render a list of REMAINING questions based on the metadata
+
+}
+
+
+
+
+
     //get the ul from the DOM
     //get the questions from the metadata
     //loop through the questions (forEach)
