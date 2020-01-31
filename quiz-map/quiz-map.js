@@ -15,32 +15,34 @@ mapUL.appendChild.li;
 
 
 
-//if the user completed all the quizzes
-    if (checkIfUserCompletedAllQuizzes(quiz, user)) {
-    //redirect to the results page
-        window.location = './results/';
-    }
- }
-
-
 //get the questions from the metadata
  //loop through the quizzes
- for (let i = 0; i < quizzes.length; i++) {
+for (let i = 0; i < quizzes.length; i++) {
     //get quizzes
     const quizQuestions = quiz[i];
    //set state of quizes to null (since it's a string)
     let quizzesDisplayed = null;
 
-
-
-//if there are no questions left to answer...
-if(checkIfUserCompletedAllQuizzes(quiz,user) === true) {
+//if the user completed all the quizzes
+    if (checkIfUserCompletedAllQuizzes(quiz, user)) {
+    //redirect to the results page
+        window.location = './results/';
+    }
+    //if there are no questions left to answer...
+    if (checkIfUserCompletedAllQuizzes(quiz,user) === true) {
     
-//if there are any questions left to answer...
-} else {
-//render a list of REMAINING questions based on the metadata
-//....
+    //if there are any questions left to answer...
+    } else {
+    //render a list of REMAINING questions based on the metadata
+    //....
+    }
+    
+    
 }
+
+
+
+
 
 
 
