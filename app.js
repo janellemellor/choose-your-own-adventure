@@ -21,7 +21,7 @@ userFormData.addEventListener('submit', (event) => {
     //save each new user to local storage
     saveUserObject(newUser);
 
-    //redirect to the map page
+    //redirect to the map page when they hit submit
     window.location = './quiz-map/index.html';
 
 });

@@ -1,6 +1,6 @@
 // Import metadata
 import quizzes from '../data/quizData.js';
-import { getUserStatus } from '../common/utils.js';
+import { createUserObject, saveUserObject, getUserStatus } from '../common/utils.js';
 
 
 //check local storage to see what questions have been completed (localStorage.getItem. Located in utils.js. Import getUserStatus above. 
@@ -8,8 +8,18 @@ import { getUserStatus } from '../common/utils.js';
 getUserStatus();
 
 
-//if there are no questions left to answer (loop through quizzes array and check if completed)
+//if there are no questions left to answer...
+    //loop through quizzes array and check if completed)
 
+//iterate through quizzes array to see if the user has answered all the questions
+quizDataArray.forEach(quiz => {
+    //if the quizzes are all completed
+    if (user.completedQuizzes[quiz.id]) {
+        return true;   
+    } else {
+        return false;
+    }
+});
 
 
 
