@@ -17,7 +17,6 @@ export function createUserObject(someFormData) {
     }; return user;
 } 
 
-
 //save the user object to local storage
 //declare a new function saveUserObject that takes in a user
 export function saveUserObject(someUserObject) {

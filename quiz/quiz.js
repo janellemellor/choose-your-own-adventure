@@ -1,8 +1,5 @@
-//the detail page
-//will need to update my html- get rid of elements on my home html page. hardcode form
 
-//get form from DOM
-//create a label for each choice with span and input inside
+
 //get the data for the correct question using the query parameter and findById
     //put the question description in #question(div id) hard code div is ok
     //for each option/choice, render a radio button
@@ -17,7 +14,21 @@
         //use the user selection in the form fdata to update the dom and change state
         //call the question completed in state, and redirect to list/map page
 
+      
+     
+
+        // Read the query parameter using UrlSearchParams built-in browser class
+        // Use your findById function to find the metadata item with that id
+        // redirect back to list page if id not found
+        // Update the dom:
+        // Static one-time things like title, image, etc.
+        // Loop through choices and create form input controls (like radio buttons) for each choice
+
+//import metadata:
+import quizzes from '../data/quizData.js';    
+
+//get form from DOM
+const quizForm = document.getElementById('quiz-form');
 
 
-
-
+  //create a label for each choice with span and input inside --

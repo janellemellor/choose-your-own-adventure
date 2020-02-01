@@ -8,13 +8,12 @@ const userFormData = document.getElementById('form');
     
 //create an event handler with submit to create the user object. 
 //add an event listener to the userFormData that will activate when the user submits the form. 
-userFormData.addEventListener('submit', (event) => {
+userFormData.addEventListener('submit', function(event) {
     //use to prevent the page from auto-refreshing
     event.preventDefault();
 
     //create a new instance of form data
     const formData = new FormData(userFormData);
-   
     //create a new user based on the data they input from the form
     const newUser = createUserObject(formData);
 
@@ -22,7 +21,7 @@ userFormData.addEventListener('submit', (event) => {
     saveUserObject(newUser);
 
     //redirect to the map page when they hit submit
-    window.location = './quiz-map/index.html';
+    window.location = './quiz-map/';
 
 });
 
