@@ -23,6 +23,11 @@ const findQuizById = findById(quizzes, quizId);
 if (!findQuizById) {
     window.location = '../quiz-map/';
 } 
+
+//fill in the title of the found quiz
+quizTitle.textContent = findQuizById.title;
+//fill in the quiz question of the found quiz
+quizDescription.textContent = findQuizById.question;
   
 
 //loop through the quiz choices metadata 
@@ -50,14 +55,32 @@ for (let i = 0; i < quizzes.choice.length; i++) {
     span.appendChild(radio);
 
     //append the quiz choices to each quiz question/choice
-    quizChoice.appendChild(label);
-}
+    const addChoices = quizChoice.appendChild(label);
+    //append the radio buttons to the DOM
+    quizOptions.appendChild(addChoices);
 
- 
-    //for the form, add an event listener on 'submit'
-        //in the event listener get the formData
+}   
+
+ //for the form, add an event listener on 'submit'
+quizForm.addEventListener('submit'), function(event) {
+    //prevent page from auto-refreshing
+    event.preventDefault();
+
+    //create a new instance of formdata from the quiz page
+    const formData = new FormData(quizForm);
+
+    //get user choice from form
+    const getQuizChoiceFromData = formData.get('choice');
+
+    //find the user choice from the metadata
+    const userChoice = findById(quizzes.choice, getQuizChoiceFromData);
+
+
+
+
+}
+    
         //use the user selection in the form fdata to update the dom and change state
         //call the question completed in state, and redirect to list/map page
 
-      
-     //create a label for each choice with span and input inside --
+    
