@@ -8,6 +8,8 @@ const quizForm = document.getElementById('quiz-form');
 const quizTitle = document.getElementById('quiz-title');
 const quizDescription = document.getElementById('quiz-description');
 const quizOptions = document.getElementById('quiz-options');
+const result = document.getElementById('result');
+const resultDiv = document.getElementById('results-div');
 
 
 
@@ -85,18 +87,11 @@ quizForm.addEventListener('submit'), function(event) {
     // Save the modified user object back to local storage
     saveUserObject(getUpdatedUser);
 
+    //hide the quiz form on submit
+    quizForm.classList.add('hidden');
+    //show/add the result description
+    resultDiv.classList.remove('hidden');
+    //insert the result description for the quiz answer the user chose.
+    result.textContent = userChoice.result; 
 
-
-    
-       
-
-
-
-// Adjust the presentation to not allow further form input (hide or disable)
-// Provide a link to go back to list page, and/or use setTimeout to auto navigate
-
-
-     //use the user selection in the form fdata to update the dom and change state
-        //call the question completed in state, and redirect to list/map page
-
-}
+};
