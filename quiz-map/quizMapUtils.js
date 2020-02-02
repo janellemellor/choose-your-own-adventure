@@ -23,12 +23,12 @@ export function createAnchorTagIfQuizIsNotCompleted(quiz) {
     aTag.classList.add('quiz');
 
     //with an href to the quiz map
-    aTag.href = './quiz-map/?' + quiz.id;  
+    aTag.href = '../quiz/?id=' + quiz.id;  
 
     //add the title of the quiz to the anchor tag
     aTag.textContent = quiz.title;
     //append the anchor tag to the li
-    const quizLink = li.appendChild.aTag;
+    const quizLink = li.appendChild(aTag);
 
     return quizLink;
      //add the href to the a tag with query params for the question
@@ -49,7 +49,7 @@ export function createSpanIfQuizIsCompleted(quiz) {
     //add the title of the quiz to the anchor tag
     span.textContent = quiz.title;
     //append the span to the li
-    const quizSpan = li.appendChild.span;
+    const quizSpan = li.appendChild(span);
 
     return quizSpan;
 }

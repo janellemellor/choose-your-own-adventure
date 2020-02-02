@@ -16,6 +16,7 @@ const mapUL = document.getElementById('quiz-list');
 for (let i = 0; i < quizzes.length; i++) {
     //get quizzes
     const quizQuestions = quizzes[i];
+    debugger;
    //set state of quizes to null (since it's a string)
     let quizzesDisplayed = null;
 
@@ -31,9 +32,10 @@ for (let i = 0; i < quizzes.length; i++) {
         quizzesDisplayed = mapUL.appendChild(createLink);
 
     }        
+}
 
-//if the user completed all the quizzes
-    if (checkIfUserCompletedAllQuizzes(quiz, user)) {
-    //redirect to the results page
-        window.location = '../results';
-    }
+// if the user completed all the quizzes
+//     if (checkIfUserCompletedAllQuizzes(quiz, user)) {
+//     //redirect to the results page
+//         window.location = '../results';
+//     }
