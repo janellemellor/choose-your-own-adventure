@@ -28,12 +28,14 @@ export function saveUserObject(someUserObject) {
 
 //check local storage to see what questions have been completed (localStorage.getItem()).
 
-//declare a new variable getUserStatus which will get the user information to know what they have completed/answered
+//declare a new variable getUserStatus which will get the user information 
 export function getUserStatus() {
     //declare a variable json which will get information about our user from local storage
-    const json = localStorage.getItem('someUser', json);
+    const json = localStorage.getItem('someUser');
     // use JSON.parse to return the string as an object
     const user = JSON.parse(json);
+    //if no json, return null;
+    if (!json) return null;
     //give us the user information (as an object)
     return user;
 }

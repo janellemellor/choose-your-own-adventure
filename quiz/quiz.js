@@ -1,6 +1,7 @@
 //import metadata:
 import quizzes from '../data/quizData.js';
 import { findById } from '../quiz/quiz-utils.js';   
+import { getUserStatus } from '../common/utils.js';
 
 //get elements from DOM
 const quizForm = document.getElementById('quiz-form');
@@ -75,12 +76,37 @@ quizForm.addEventListener('submit'), function(event) {
     //find the user choice from the metadata
     const userChoice = findById(quizzes.choice, getQuizChoiceFromData);
 
+    //get user info from local storage
+    const getUpdatedUser = getUserStatus();
+    
 
 
 
 }
     
-        //use the user selection in the form fdata to update the dom and change state
-        //call the question completed in state, and redirect to list/map page
+       
 
-    
+// write a function that takes the choice and the user object, which modifies the user object correctly
+
+//create a function that takes in the choice and the user and updates the state based on the selection they make
+function updateQuizScores(userChoice, user, quizId) {
+    //add carbon footprint points depending on the question asked
+    user.cf += userChoice.cf;
+    //add number of trees earned to user depending on the question asked
+    user.trees += userChoice.trees;
+    //mark that user completed quiz
+    user.completedQuizzes[quizId] = true;
+
+    return updateQuizScores;
+};
+
+
+
+// Save the modified user object back to local storage
+// Adjust the presentation based on the choice, as makes sense for your app
+// Adjust the presentation to not allow further form input (hide or disable)
+// Provide a link to go back to list page, and/or use setTimeout to auto navigate
+
+
+     //use the user selection in the form fdata to update the dom and change state
+        //call the question completed in state, and redirect to list/map page
