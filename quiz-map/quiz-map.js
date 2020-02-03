@@ -22,6 +22,7 @@ for (let i = 0; i < quizzes.length; i++) {
 
    //if the user completed the quiz
     if (user.completedQuizzes[quizQuestions.id]) {
+
         //mark quiz completed with a span
         const createSpan = createSpanIfQuizIsCompleted(quizQuestions); 
         quizzesDisplayed = mapUL.appendChild(createSpan);
@@ -35,7 +36,8 @@ for (let i = 0; i < quizzes.length; i++) {
 }
 
 // if the user completed all the quizzes
-//     if (checkIfUserCompletedAllQuizzes(quiz, user)) {
-//     //redirect to the results page
-//         window.location = '../results';
-//     }
+if (checkIfUserCompletedAllQuizzes(quizzes, user)) {
+    //redirect to the results page
+    window.location = '../results';
+    
+}

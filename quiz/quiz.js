@@ -76,7 +76,7 @@ quizForm.addEventListener('submit', function(event) {
   
   //get user choice from form
     const getQuizChoiceFromData = formData.get('choice');
-    // debugger;
+    
   //find the user choice from the metadata
     const userChoice = findById(findQuizById.choices, getQuizChoiceFromData);
 
@@ -84,7 +84,7 @@ quizForm.addEventListener('submit', function(event) {
     const getUpdatedUser = getUserStatus();
 
   //update the user's cf and trees scores
-    updateQuizScores(userChoice, getUpdatedUser, getQuizChoiceFromData);
+    updateQuizScores(userChoice, getUpdatedUser, findQuizById.id);
    
   // Save the modified user object back to local storage
     saveUserObject(getUpdatedUser);
@@ -94,8 +94,6 @@ quizForm.addEventListener('submit', function(event) {
   //show/add the result description
     resultDiv.classList.remove('hidden');
   //insert the result description for the quiz answer the user chose.
-
-  debugger;
     
     result.textContent = userChoice.result;
 });

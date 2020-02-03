@@ -1,14 +1,8 @@
 //iterate through quizzes array to see if the user has answered all the questions
-export function checkIfUserCompletedAllQuizzes(quiz) {
-    quiz.forEach(quiz, user => {
-        //if the quizzes are all completed return true (*check this syntax)
-        if (user.completedQuizzes[quiz.id]) {
-            return true;   
-            //otherwise, return false
-        } else {
-            return false;
-        }
-    });    
+export function checkIfUserCompletedAllQuizzes(quizzes, user) {
+   //if the quizzes are all completed return true (*check this syntax)
+    return quizzes.every(quiz => user.completedQuizzes[quiz.id]);    
+  
 }
 
 
