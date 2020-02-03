@@ -16,7 +16,7 @@ const mapUL = document.getElementById('quiz-list');
 for (let i = 0; i < quizzes.length; i++) {
     //get quizzes
     const quizQuestions = quizzes[i];
-    debugger;
+
    //set state of quizes to null (since it's a string)
     let quizzesDisplayed = null;
 
